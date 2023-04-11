@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レスポンシブの書き方</title>
+</head>
+<style>
+    .parent {
+        width: 100vw;
+        height: 100vh;
+        background-color: gray;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .child {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        border: orange solid 5px;
+
+    }
+
+    /* 横幅600pxまでのデザインを指定 */
+    /* 横幅600px以下　->　縦並び */
+    /* 横幅600px以上　->　横並び */
+    @media screen and (max-width: 600px) {
+        .parent {
+            flex-direction: column;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</body>
+
+</html>
